@@ -32,7 +32,7 @@ function addGamesToPage(games) {
     games.forEach(game => {
         const newDiv = document.createElement('div');
         newDiv.classList.add('game-card');
-        const name = document.createElement('p');
+        const name = document.createElement('h3');
         const description = document.createElement('p');
         const newImg = document.createElement('img');
         const backers = document.createElement('p');
@@ -82,18 +82,34 @@ const contributionsCard = document.getElementById("num-contributions");
 
 // use reduce() to count the number of total contributions by summing the backers
 
+const totalContributions = GAMES_JSON.reduce((acc, next) => {
+    return acc + next.backers;
+}, 0);
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
 
+let displayContributions = totalContributions.toLocaleString('en-US');
+contributionsCard.innerHTML = `${displayContributions}`;
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
-
+const totalMoney = GAMES_JSON.reduce((acc, next) => {
+    return acc + next.pledged;
+}, 0);
+let displayMoney = totalMoney.toLocaleString('en-US');
+raisedCard.innerHTML = `${displayMoney}`;
 // set inner HTML using template literal
-
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
+
+let totalGames = 0;
+
+for (let key in GAMES_JSON){
+    totalGames++;
+};
+
+gamesCard.innerHTML = `${totalGames}`;
 
 
 /*************************************************************************************
