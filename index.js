@@ -96,7 +96,7 @@ const totalMoney = GAMES_JSON.reduce((acc, next) => {
     return acc + next.pledged;
 }, 0);
 let displayMoney = totalMoney.toLocaleString('en-US');
-raisedCard.innerHTML = `${displayMoney}`;
+raisedCard.innerHTML = `$${displayMoney}`;
 // set inner HTML using template literal
 
 // grab number of games card and set its inner HTML
@@ -177,7 +177,6 @@ let unfundedCount = GAMES_JSON.reduce((first, next) =>{
 // create a string that explains the number of unfunded games using the ternary operator
 
 const displayStr = `A total of $${displayMoney} has been raised for ${totalGames > 0 ? totalGames + " games" : totalGames + " game"}. Currently, ${unfundedCount <= 1 ? unfundedCount + " game remains unfunded." : unfundedCount + " games remain unfunded."} We need your help to fund these amazing games!`
-console.log(displayStr);
 
 // create a new DOM element containing the template string and append it to the description container
 
@@ -198,6 +197,15 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
     return item2.pledged - item1.pledged;
 });
 
+const [number1, number2, ...theRest] = sortedGames; 
+
+const firstGame = document.createElement('p');
+const secondGame = document.createElement('p');
+firstGame.innerText = `${number1.name}`;
+secondGame.innerText = `${number2.name}`;
+
+firstGameContainer.appendChild(firstGame);
+secondGameContainer.appendChild(secondGame);
 // use destructuring and the spread operator to grab the first and second games
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element

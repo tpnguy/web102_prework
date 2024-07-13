@@ -1,26 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #303030;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 #tentacles {
-    width: 50px;
+    width: 80px;
 }
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: rgb(65, 84, 90);
     padding: 1%;
     align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+    justify-content: space-between;
+}
+.header-text{
+    background: #CFE7FA;
+    background: linear-gradient(to left, #CFE7FA 0%, #6393C1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#description {
+    margin: 10%;
+    text-align: center;
+    color: white;
+}
+
+.stats-title{
+    margin: 20px;
+    margin-bottom: -10px;
+    color: white;
+    font-size: 40px;
+}
+p.stats-title{
+    font-size: 20px;
 }
 
 .stats-container {
     display: flex;
+    align-items: center;
 }
 
 .stats-card {
@@ -34,6 +62,12 @@ body {
 
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
+}
+
+.the-games{
+    margin-top: 15px;
+    padding: 5px;
+    background-color: rgb(65, 84, 90);
 }
 
 #games-container {
@@ -59,7 +93,7 @@ body {
 
 .game-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    box-shadow: 0 0 30px rgb(107, 164, 182);
 }
 
 #button-container {
@@ -72,4 +106,9 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    font-size: 20px;
+}
+button:hover{
+    scale: 1.1;
+    transition: all 0.25s;
 }
