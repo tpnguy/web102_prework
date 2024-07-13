@@ -23,8 +23,8 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/a/H9SdJTR' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+<!--<img src='https://imgur.com/a/H9SdJTR' title='Video Walkthrough' width='' alt='Video Walkthrough' />-->
+![](https://github.com/tpnguy/web102_prework/blob/main/assets/someRecording.gif)
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LiceCap
 <!-- Recommended tools:
