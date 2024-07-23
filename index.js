@@ -150,7 +150,8 @@ function showAllGames() {
     addGamesToPage(GAMES_JSON);
     // add all games from the JSON data to the DOM
 }
-showAllGames();
+filterFundedOnly();
+
 
 // select each button in the "Our Games" section
 const unfundedBtn = document.getElementById("unfunded-btn");
